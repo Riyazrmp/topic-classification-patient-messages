@@ -1,0 +1,229 @@
+Model,Corpus,Label,F1,Support
+LSTM,Combined,Cultural/Religion,0.7921,53
+LSTM,Combined,Diet/Nutrition,0.6591,50
+LSTM,Combined,Emergent,0.2051,20
+LSTM,Combined,Exercise,0.5806,21
+LSTM,Combined,Friends & Family,0.4167,40
+LSTM,Combined,Grateful Patient,0.4615,47
+LSTM,Combined,Health Education,0.7407,46
+LSTM,Combined,Laboratory/Testing,0.9357,166
+LSTM,Combined,Medications,0.624,62
+LSTM,Combined,No Symptoms,0.8614,255
+LSTM,Combined,Non-urgent,0.9243,522
+LSTM,Combined,Outpatient Logistics/Scheduling,0.5915,74
+LSTM,Combined,Physical,0.6629,94
+LSTM,Combined,Physical Environment/Climate,0.8421,20
+LSTM,Combined,Service Complaint,0.0,18
+LSTM,Combined,Social Services,0.64,17
+LSTM,Combined,Technical/IT,0.4444,38
+LSTM,Combined,Urgent,0.2927,42
+LSTM,Combined,Work/School,0.3571,23
+LSTM,Rwanda,Cultural/Religion,0.7308,27
+LSTM,Rwanda,Diet/Nutrition,0.5,19
+LSTM,Rwanda,Emergent,0.2105,19
+LSTM,Rwanda,Exercise,0.3333,5
+LSTM,Rwanda,Friends & Family,0.2759,18
+LSTM,Rwanda,Grateful Patient,0.5455,36
+LSTM,Rwanda,Health Education,0.2,8
+LSTM,Rwanda,Laboratory/Testing,0.9412,165
+LSTM,Rwanda,Medications,0.5517,27
+LSTM,Rwanda,No Symptoms,0.863,255
+LSTM,Rwanda,Non-urgent,0.9104,404
+LSTM,Rwanda,Outpatient Logistics/Scheduling,0.5176,44
+LSTM,Rwanda,Physical,0.6357,67
+LSTM,Rwanda,Physical Environment/Climate,0.0,0
+LSTM,Rwanda,Service Complaint,0.0,17
+LSTM,Rwanda,Social Services,0.0,6
+LSTM,Rwanda,Technical/IT,0.4211,31
+LSTM,Rwanda,Urgent,0.3117,38
+LSTM,Rwanda,Work/School,0.0,10
+LSTM,Canada,Cultural/Religion,0.8571,26
+LSTM,Canada,Diet/Nutrition,0.75,31
+LSTM,Canada,Emergent,0.0,1
+LSTM,Canada,Exercise,0.64,16
+LSTM,Canada,Friends & Family,0.5116,22
+LSTM,Canada,Grateful Patient,0.0,11
+LSTM,Canada,Health Education,0.8169,38
+LSTM,Canada,Laboratory/Testing,0.0,1
+LSTM,Canada,Medications,0.6866,35
+LSTM,Canada,No Symptoms,0.0,0
+LSTM,Canada,Non-urgent,0.9707,118
+LSTM,Canada,Outpatient Logistics/Scheduling,0.7018,30
+LSTM,Canada,Physical,0.7391,27
+LSTM,Canada,Physical Environment/Climate,0.8649,20
+LSTM,Canada,Service Complaint,0.0,1
+LSTM,Canada,Social Services,0.8421,11
+LSTM,Canada,Technical/IT,0.5333,7
+LSTM,Canada,Urgent,0.0,4
+LSTM,Canada,Work/School,0.5556,13
+RandomForest,Combined,Cultural/Religion,0.9159,53
+RandomForest,Combined,Diet/Nutrition,0.8511,50
+RandomForest,Combined,Emergent,0.4286,20
+RandomForest,Combined,Exercise,0.7368,21
+RandomForest,Combined,Friends & Family,0.6,40
+RandomForest,Combined,Grateful Patient,0.5593,47
+RandomForest,Combined,Health Education,0.7312,46
+RandomForest,Combined,Laboratory/Testing,0.9213,166
+RandomForest,Combined,Medications,0.8718,62
+RandomForest,Combined,No Symptoms,0.8,255
+RandomForest,Combined,Non-urgent,0.9526,522
+RandomForest,Combined,Outpatient Logistics/Scheduling,0.7516,74
+RandomForest,Combined,Physical,0.7735,94
+RandomForest,Combined,Physical Environment/Climate,0.8649,20
+RandomForest,Combined,Service Complaint,0.2162,18
+RandomForest,Combined,Social Services,0.64,17
+RandomForest,Combined,Technical/IT,0.6071,38
+RandomForest,Combined,Urgent,0.3077,42
+RandomForest,Combined,Work/School,0.6667,23
+RandomForest,Rwanda,Cultural/Religion,0.8929,27
+RandomForest,Rwanda,Diet/Nutrition,0.7647,19
+RandomForest,Rwanda,Emergent,0.439,19
+RandomForest,Rwanda,Exercise,0.7273,5
+RandomForest,Rwanda,Friends & Family,0.6316,18
+RandomForest,Rwanda,Grateful Patient,0.6,36
+RandomForest,Rwanda,Health Education,0.0,8
+RandomForest,Rwanda,Laboratory/Testing,0.924,165
+RandomForest,Rwanda,Medications,0.8261,27
+RandomForest,Rwanda,No Symptoms,0.8,255
+RandomForest,Rwanda,Non-urgent,0.9448,404
+RandomForest,Rwanda,Outpatient Logistics/Scheduling,0.68,44
+RandomForest,Rwanda,Physical,0.7519,67
+RandomForest,Rwanda,Physical Environment/Climate,0.0,0
+RandomForest,Rwanda,Service Complaint,0.1765,17
+RandomForest,Rwanda,Social Services,0.0,6
+RandomForest,Rwanda,Technical/IT,0.5909,31
+RandomForest,Rwanda,Urgent,0.3279,38
+RandomForest,Rwanda,Work/School,0.4615,10
+RandomForest,Canada,Cultural/Religion,0.9412,26
+RandomForest,Canada,Diet/Nutrition,0.9,31
+RandomForest,Canada,Emergent,0.0,1
+RandomForest,Canada,Exercise,0.7407,16
+RandomForest,Canada,Friends & Family,0.5806,22
+RandomForest,Canada,Grateful Patient,0.3333,11
+RandomForest,Canada,Health Education,0.8,38
+RandomForest,Canada,Laboratory/Testing,0.0,1
+RandomForest,Canada,Medications,0.9014,35
+RandomForest,Canada,No Symptoms,0.0,0
+RandomForest,Canada,Non-urgent,0.9793,118
+RandomForest,Canada,Outpatient Logistics/Scheduling,0.8772,30
+RandomForest,Canada,Physical,0.8333,27
+RandomForest,Canada,Physical Environment/Climate,0.8649,20
+RandomForest,Canada,Service Complaint,0.6667,1
+RandomForest,Canada,Social Services,0.8421,11
+RandomForest,Canada,Technical/IT,0.6667,7
+RandomForest,Canada,Urgent,0.0,4
+RandomForest,Canada,Work/School,0.7692,13
+XGBoost,Combined,Cultural/Religion,0.9346,53
+XGBoost,Combined,Diet/Nutrition,0.875,50
+XGBoost,Combined,Emergent,0.45,20
+XGBoost,Combined,Exercise,0.7368,21
+XGBoost,Combined,Friends & Family,0.6364,40
+XGBoost,Combined,Grateful Patient,0.5872,47
+XGBoost,Combined,Health Education,0.7292,46
+XGBoost,Combined,Laboratory/Testing,0.9677,166
+XGBoost,Combined,Medications,0.8966,62
+XGBoost,Combined,No Symptoms,0.8439,255
+XGBoost,Combined,Non-urgent,0.9515,522
+XGBoost,Combined,Outpatient Logistics/Scheduling,0.7612,74
+XGBoost,Combined,Physical,0.8095,94
+XGBoost,Combined,Physical Environment/Climate,0.85,20
+XGBoost,Combined,Service Complaint,0.0635,18
+XGBoost,Combined,Social Services,0.6207,17
+XGBoost,Combined,Technical/IT,0.5556,38
+XGBoost,Combined,Urgent,0.2826,42
+XGBoost,Combined,Work/School,0.6111,23
+XGBoost,Rwanda,Cultural/Religion,0.9091,27
+XGBoost,Rwanda,Diet/Nutrition,0.8571,19
+XGBoost,Rwanda,Emergent,0.4615,19
+XGBoost,Rwanda,Exercise,0.7273,5
+XGBoost,Rwanda,Friends & Family,0.6667,18
+XGBoost,Rwanda,Grateful Patient,0.6304,36
+XGBoost,Rwanda,Health Education,0.0,8
+XGBoost,Rwanda,Laboratory/Testing,0.9676,165
+XGBoost,Rwanda,Medications,0.875,27
+XGBoost,Rwanda,No Symptoms,0.8439,255
+XGBoost,Rwanda,Non-urgent,0.9423,404
+XGBoost,Rwanda,Outpatient Logistics/Scheduling,0.6494,44
+XGBoost,Rwanda,Physical,0.7863,67
+XGBoost,Rwanda,Physical Environment/Climate,0.0,0
+XGBoost,Rwanda,Service Complaint,0.0678,17
+XGBoost,Rwanda,Social Services,0.2222,6
+XGBoost,Rwanda,Technical/IT,0.5116,31
+XGBoost,Rwanda,Urgent,0.2955,38
+XGBoost,Rwanda,Work/School,0.3077,10
+XGBoost,Canada,Cultural/Religion,0.9615,26
+XGBoost,Canada,Diet/Nutrition,0.8852,31
+XGBoost,Canada,Emergent,0.0,1
+XGBoost,Canada,Exercise,0.7407,16
+XGBoost,Canada,Friends & Family,0.6154,22
+XGBoost,Canada,Grateful Patient,0.3529,11
+XGBoost,Canada,Health Education,0.8046,38
+XGBoost,Canada,Laboratory/Testing,1.0,1
+XGBoost,Canada,Medications,0.9118,35
+XGBoost,Canada,No Symptoms,0.0,0
+XGBoost,Canada,Non-urgent,0.9833,118
+XGBoost,Canada,Outpatient Logistics/Scheduling,0.9123,30
+XGBoost,Canada,Physical,0.8627,27
+XGBoost,Canada,Physical Environment/Climate,0.8718,20
+XGBoost,Canada,Service Complaint,0.0,1
+XGBoost,Canada,Social Services,0.8,11
+XGBoost,Canada,Technical/IT,0.7273,7
+XGBoost,Canada,Urgent,0.0,4
+XGBoost,Canada,Work/School,0.7826,13
+Ensemble,Combined,Cultural/Religion,0.963,53
+Ensemble,Combined,Diet/Nutrition,0.92,50
+Ensemble,Combined,Emergent,0.4706,20
+Ensemble,Combined,Exercise,0.8837,21
+Ensemble,Combined,Friends & Family,0.8235,40
+Ensemble,Combined,Grateful Patient,0.6292,47
+Ensemble,Combined,Health Education,0.8043,46
+Ensemble,Combined,Laboratory/Testing,0.9763,166
+Ensemble,Combined,Medications,0.9268,62
+Ensemble,Combined,No Symptoms,0.8839,255
+Ensemble,Combined,Non-urgent,0.9552,522
+Ensemble,Combined,Outpatient Logistics/Scheduling,0.8158,74
+Ensemble,Combined,Physical,0.8783,94
+Ensemble,Combined,Physical Environment/Climate,0.9048,20
+Ensemble,Combined,Service Complaint,0.5714,18
+Ensemble,Combined,Social Services,0.5333,17
+Ensemble,Combined,Technical/IT,0.6667,38
+Ensemble,Combined,Urgent,0.3765,42
+Ensemble,Combined,Work/School,0.8889,23
+Ensemble,Rwanda,Cultural/Religion,0.9286,27
+Ensemble,Rwanda,Diet/Nutrition,0.8718,19
+Ensemble,Rwanda,Emergent,0.4848,19
+Ensemble,Rwanda,Exercise,0.8333,5
+Ensemble,Rwanda,Friends & Family,0.7778,18
+Ensemble,Rwanda,Grateful Patient,0.7397,36
+Ensemble,Rwanda,Health Education,0.3636,8
+Ensemble,Rwanda,Laboratory/Testing,0.9792,165
+Ensemble,Rwanda,Medications,0.9057,27
+Ensemble,Rwanda,No Symptoms,0.8839,255
+Ensemble,Rwanda,Non-urgent,0.9468,404
+Ensemble,Rwanda,Outpatient Logistics/Scheduling,0.766,44
+Ensemble,Rwanda,Physical,0.8824,67
+Ensemble,Rwanda,Physical Environment/Climate,0.0,0
+Ensemble,Rwanda,Service Complaint,0.5882,17
+Ensemble,Rwanda,Social Services,0.0,6
+Ensemble,Rwanda,Technical/IT,0.6667,31
+Ensemble,Rwanda,Urgent,0.375,38
+Ensemble,Rwanda,Work/School,0.9474,10
+Ensemble,Canada,Cultural/Religion,1.0,26
+Ensemble,Canada,Diet/Nutrition,0.9508,31
+Ensemble,Canada,Emergent,0.0,1
+Ensemble,Canada,Exercise,0.9032,16
+Ensemble,Canada,Friends & Family,0.8571,22
+Ensemble,Canada,Grateful Patient,0.125,11
+Ensemble,Canada,Health Education,0.8642,38
+Ensemble,Canada,Laboratory/Testing,0.0,1
+Ensemble,Canada,Medications,0.9429,35
+Ensemble,Canada,No Symptoms,0.0,0
+Ensemble,Canada,Non-urgent,0.9833,118
+Ensemble,Canada,Outpatient Logistics/Scheduling,0.8966,30
+Ensemble,Canada,Physical,0.8679,27
+Ensemble,Canada,Physical Environment/Climate,0.9048,20
+Ensemble,Canada,Service Complaint,0.0,1
+Ensemble,Canada,Social Services,0.8,11
+Ensemble,Canada,Technical/IT,0.6667,7
+Ensemble,Canada,Urgent,0.4,4
+Ensemble,Canada,Work/School,0.8462,13

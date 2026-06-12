@@ -1,0 +1,13 @@
+Model,Corpus,N,MacroF1,CI_lo,CI_hi
+LSTM,Combined,584,0.5806,0.5443,0.6104
+LSTM,Rwanda,461,0.4183,0.3646,0.465
+LSTM,Canada,123,0.4984,0.4548,0.5337
+RandomForest,Combined,584,0.6945,0.6623,0.7201
+RandomForest,Rwanda,461,0.5547,0.5126,0.5846
+RandomForest,Canada,123,0.6156,0.549,0.6467
+XGBoost,Combined,584,0.6928,0.6609,0.7175
+XGBoost,Rwanda,461,0.5643,0.517,0.597
+XGBoost,Canada,123,0.6427,0.5553,0.6717
+Ensemble,Combined,584,0.7828,0.7509,0.8086
+Ensemble,Rwanda,461,0.6811,0.6398,0.7092
+Ensemble,Canada,123,0.632,0.5808,0.6674
