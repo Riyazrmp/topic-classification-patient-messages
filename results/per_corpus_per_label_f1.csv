@@ -170,6 +170,120 @@ XGBoost,Canada,Social Services,0.8,11
 XGBoost,Canada,Technical/IT,0.7273,7
 XGBoost,Canada,Urgent,0.0,4
 XGBoost,Canada,Work/School,0.7826,13
+SVM,Combined,Cultural/Religion,0.8824,53
+SVM,Combined,Diet/Nutrition,0.8421,50
+SVM,Combined,Emergent,0.5161,20
+SVM,Combined,Exercise,0.5161,21
+SVM,Combined,Friends & Family,0.5352,40
+SVM,Combined,Grateful Patient,0.5517,47
+SVM,Combined,Health Education,0.8222,46
+SVM,Combined,Laboratory/Testing,0.9547,166
+SVM,Combined,Medications,0.7652,62
+SVM,Combined,No Symptoms,0.8824,255
+SVM,Combined,Non-urgent,0.9508,522
+SVM,Combined,Outpatient Logistics/Scheduling,0.7153,74
+SVM,Combined,Physical,0.7684,94
+SVM,Combined,Physical Environment/Climate,0.8718,20
+SVM,Combined,Service Complaint,0.2692,18
+SVM,Combined,Social Services,0.5882,17
+SVM,Combined,Technical/IT,0.5424,38
+SVM,Combined,Urgent,0.3696,42
+SVM,Combined,Work/School,0.6486,23
+SVM,Rwanda,Cultural/Religion,0.8,27
+SVM,Rwanda,Diet/Nutrition,0.7647,19
+SVM,Rwanda,Emergent,0.5333,19
+SVM,Rwanda,Exercise,0.5,5
+SVM,Rwanda,Friends & Family,0.4828,18
+SVM,Rwanda,Grateful Patient,0.5833,36
+SVM,Rwanda,Health Education,0.3636,8
+SVM,Rwanda,Laboratory/Testing,0.9576,165
+SVM,Rwanda,Medications,0.7083,27
+SVM,Rwanda,No Symptoms,0.8824,255
+SVM,Rwanda,Non-urgent,0.9426,404
+SVM,Rwanda,Outpatient Logistics/Scheduling,0.6024,44
+SVM,Rwanda,Physical,0.7559,67
+SVM,Rwanda,Physical Environment/Climate,0.0,0
+SVM,Rwanda,Service Complaint,0.2609,17
+SVM,Rwanda,Social Services,0.0,6
+SVM,Rwanda,Technical/IT,0.5,31
+SVM,Rwanda,Urgent,0.3864,38
+SVM,Rwanda,Work/School,0.4286,10
+SVM,Canada,Cultural/Religion,0.9615,26
+SVM,Canada,Diet/Nutrition,0.8852,31
+SVM,Canada,Emergent,0.0,1
+SVM,Canada,Exercise,0.5217,16
+SVM,Canada,Friends & Family,0.5714,22
+SVM,Canada,Grateful Patient,0.4,11
+SVM,Canada,Health Education,0.8861,38
+SVM,Canada,Laboratory/Testing,0.0,1
+SVM,Canada,Medications,0.806,35
+SVM,Canada,No Symptoms,0.0,0
+SVM,Canada,Non-urgent,0.9793,118
+SVM,Canada,Outpatient Logistics/Scheduling,0.8889,30
+SVM,Canada,Physical,0.8,27
+SVM,Canada,Physical Environment/Climate,0.8947,20
+SVM,Canada,Service Complaint,0.3333,1
+SVM,Canada,Social Services,0.7407,11
+SVM,Canada,Technical/IT,0.7273,7
+SVM,Canada,Urgent,0.0,4
+SVM,Canada,Work/School,0.7826,13
+BERT,Combined,Cultural/Religion,0.8772,53
+BERT,Combined,Diet/Nutrition,0.8468,50
+BERT,Combined,Emergent,0.2581,20
+BERT,Combined,Exercise,0.8085,21
+BERT,Combined,Friends & Family,0.6914,40
+BERT,Combined,Grateful Patient,0.5039,47
+BERT,Combined,Health Education,0.7,46
+BERT,Combined,Laboratory/Testing,0.9471,166
+BERT,Combined,Medications,0.8871,62
+BERT,Combined,No Symptoms,0.8835,255
+BERT,Combined,Non-urgent,0.9031,522
+BERT,Combined,Outpatient Logistics/Scheduling,0.7682,74
+BERT,Combined,Physical,0.88,94
+BERT,Combined,Physical Environment/Climate,0.8571,20
+BERT,Combined,Service Complaint,0.4,18
+BERT,Combined,Social Services,0.5161,17
+BERT,Combined,Technical/IT,0.5542,38
+BERT,Combined,Urgent,0.3385,42
+BERT,Combined,Work/School,0.8302,23
+BERT,Rwanda,Cultural/Religion,0.7742,27
+BERT,Rwanda,Diet/Nutrition,0.85,19
+BERT,Rwanda,Emergent,0.2623,19
+BERT,Rwanda,Exercise,0.8333,5
+BERT,Rwanda,Friends & Family,0.5882,18
+BERT,Rwanda,Grateful Patient,0.566,36
+BERT,Rwanda,Health Education,0.375,8
+BERT,Rwanda,Laboratory/Testing,0.9527,165
+BERT,Rwanda,Medications,0.8519,27
+BERT,Rwanda,No Symptoms,0.8835,255
+BERT,Rwanda,Non-urgent,0.885,404
+BERT,Rwanda,Outpatient Logistics/Scheduling,0.6882,44
+BERT,Rwanda,Physical,0.878,67
+BERT,Rwanda,Physical Environment/Climate,0.0,0
+BERT,Rwanda,Service Complaint,0.4186,17
+BERT,Rwanda,Social Services,0.0,6
+BERT,Rwanda,Technical/IT,0.5758,31
+BERT,Rwanda,Urgent,0.352,38
+BERT,Rwanda,Work/School,0.8,10
+BERT,Canada,Cultural/Religion,1.0,26
+BERT,Canada,Diet/Nutrition,0.8451,31
+BERT,Canada,Emergent,0.0,1
+BERT,Canada,Exercise,0.8,16
+BERT,Canada,Friends & Family,0.766,22
+BERT,Canada,Grateful Patient,0.1905,11
+BERT,Canada,Health Education,0.7619,38
+BERT,Canada,Laboratory/Testing,0.0,1
+BERT,Canada,Medications,0.9143,35
+BERT,Canada,No Symptoms,0.0,0
+BERT,Canada,Non-urgent,0.961,118
+BERT,Canada,Outpatient Logistics/Scheduling,0.8966,30
+BERT,Canada,Physical,0.8846,27
+BERT,Canada,Physical Environment/Climate,0.8571,20
+BERT,Canada,Service Complaint,0.0,1
+BERT,Canada,Social Services,0.7273,11
+BERT,Canada,Technical/IT,0.4706,7
+BERT,Canada,Urgent,0.0,4
+BERT,Canada,Work/School,0.8571,13
 Ensemble,Combined,Cultural/Religion,0.963,53
 Ensemble,Combined,Diet/Nutrition,0.92,50
 Ensemble,Combined,Emergent,0.4706,20

@@ -1,12 +1,11 @@
 """
 Per-corpus and per-label evaluation for all six classifiers, with bootstrap CIs.
 
-Inputs:
-  - data/shared_split_indices.npz       (train/val/test idx; produced by create_shared_split.py)
-  - data/dataRwaCovid.csv               (Rwanda corpus)
-  - data/dataIHADiabetes.csv            (Canada corpus)
+Inputs (predictions/ only — no raw data files required):
   - predictions/<Model>_preds.npz       (y_true (584,19) int, y_pred (584,19) numeric)
   - predictions/Ensemble_test_predictions.json
+      (sanitized: each record has "true_labels", "predicted_labels",
+       "source_corpus" — no conversation text)
 
 Outputs (results/):
   - per_corpus_macro_f1.csv            wide table: Model x {Combined, Rwanda, Canada} with 95% CI
@@ -17,8 +16,6 @@ Run:  .venv/bin/python per_corpus_evaluation.py
 """
 
 import json
-import os
-import random
 from pathlib import Path
 
 import numpy as np
@@ -33,61 +30,6 @@ RESULTS_DIR = ROOT / "results"
 RESULTS_DIR.mkdir(exist_ok=True)
 
 
-def reconstruct_combined_filtered():
-    """Reproduce the dataframe used by create_shared_split.py so we can map test_idx -> source."""
-    random.seed(SEED)
-    np.random.seed(SEED)
-
-    df_covid = pd.read_csv(ROOT / "data/dataRwaCovid.csv", on_bad_lines="skip", low_memory=False)
-    df_diab = pd.read_csv(ROOT / "data/dataIHADiabetes.csv", on_bad_lines="skip", low_memory=False)
-
-    diabetes_topics = [
-        "Physical", "Psychological", "No Symptoms", "Prognosis", "Laboratory/Testing",
-        "Imaging", "Clinical", "Testing/Monitoring Devices", "Health Data",
-        "Diagnostic Methods - Other", "Medications", "Procedures", "Alternative",
-        "Physical Therapy", "Counseling", "Adverse Events", "Therapeutic Devices",
-        "Treatment(Rx) - Other", "Outpatient Logistics/Scheduling", "Hospitalizations",
-        "Insurance/Billing", "Medical Records", "Referrals", "Transportation",
-        "Primary (Pharmaceutical Prevention)", "Primary (Non-Pharmaceutical Prevention)",
-        "Secondary (Pharmaceutical Prevention)", "Secondary (Non-Pharmaceutical Prevention)",
-        "Diet/Nutrition", "Exercise", "Substance Use", "Entertainment", "Lifestyle - Other",
-        "Housing", "Work/School", "Social Services", "Friends & Family", "Cultural/Religion",
-        "Travel", "Physical Environment/Climate", "Financial", "Social - Other",
-        "Technical/IT", "Safety Concerns", "Health Education",
-        "Sexual & Reproductive Health", "Child & Family Health", "Problems Solved",
-        "Grateful Patient", "Service Complaint", "Request to Stop", "Emergent", "Urgent",
-        "Non-urgent", "Stigma Present", "Rapport", "Transition to Adult Clinic",
-    ]
-    covid_topics = [
-        "Physical", "Mental/Emotional", "No Symptoms", "Laboratory/Testing", "Imaging",
-        "Clinical", "Diagnostic Methods - Other", "Medications", "Procedures",
-        "Alternative", "Physical Therapy", "Counseling", "Treatment(Rx) - Other",
-        "Outpatient Logistics/Scheduling", "Hospitalizations", "Pharmaceutical Prevention",
-        "Non-Pharmaceutical Prevention", "Diet/Nutrition", "Exercise", "Substance Use",
-        "Lifestyle - Other", "Housing", "Work/School", "Social Services",
-        "Friends & Family", "Cultural/Religion", "Travel", "Physical Environment/Climate",
-        "Financial", "Social - Other", "Technical/IT", "Safety concern",
-        "Health Education", "Maternal & Child Health", "Problems Solved",
-        "Grateful Patient", "Service Complaint", "Request to Stop", "Emergent", "Urgent",
-        "Non-urgent", "Stigma Present", "wave", "batch",
-    ]
-    common = sorted(set(diabetes_topics) & set(covid_topics))
-
-    df_d = df_diab[["conversation"] + common].copy()
-    df_d["source"] = "Canada"
-    df_c = df_covid[["conversation(english_only)"] + common].rename(
-        columns={"conversation(english_only)": "conversation"}
-    ).copy()
-    df_c["source"] = "Rwanda"
-
-    df = pd.concat([df_c, df_d]).reset_index(drop=True)
-    label_sum = df[common].sum()
-    label_keep = label_sum[label_sum >= 100].index.tolist()
-    df = df[["conversation", "source"] + label_keep].copy()
-    df = df.drop_duplicates(subset="conversation").reset_index(drop=True)
-    return df, label_keep
-
-
 def load_predictions():
     """Load all saved predictions, returning {model: (y_true, y_pred)}."""
     out = {}
@@ -100,6 +42,7 @@ def load_predictions():
             if y_pred.dtype != int:
                 y_pred = (y_pred > 0.5).astype(int) if y_pred.max() <= 1 else y_pred.astype(int)
             out[name] = (y_true, y_pred)
+
     ens_path = PRED_DIR / "Ensemble_test_predictions.json"
     if ens_path.exists():
         ens = json.load(open(ens_path))
@@ -133,24 +76,18 @@ def per_label_f1(y_true, y_pred, labels):
 
 
 def main():
-    df, label_keep = reconstruct_combined_filtered()
-    split = np.load(ROOT / "data/shared_split_indices.npz")
-    test_idx = split["test_idx"]
-    print(f"Test set: {len(test_idx)} docs (Rwanda + Canada)")
-    print(f"Labels kept (>= 100 occurrences in pooled corpus): {len(label_keep)}")
-
     preds = load_predictions()
-    labels_ens = preds.pop("_labels_from_ensemble", label_keep)
+    labels_ens = preds.pop("_labels_from_ensemble", None)
     src_ens = preds.pop("_source_from_ensemble", None)
 
-    if src_ens is None:
-        raise RuntimeError("Ensemble JSON missing; need its source_corpus column to do per-corpus eval.")
+    if src_ens is None or labels_ens is None:
+        raise RuntimeError("Ensemble JSON missing or malformed; need its true_labels/source_corpus fields for per-corpus eval.")
 
+    label_keep = labels_ens
     src_counts = pd.Series(src_ens).value_counts().to_dict()
+    print(f"Test set: {len(src_ens)} docs (Rwanda + Canada)")
+    print(f"Labels kept: {len(label_keep)}")
     print(f"Source counts in test set (per Ensemble JSON): {src_counts}")
-    if labels_ens != label_keep:
-        print("WARNING: ensemble label order differs from reconstructed; using ensemble order")
-        label_keep = labels_ens
 
     macro_rows = []
     perlabel_rows = []
